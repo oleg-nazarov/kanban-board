@@ -1,0 +1,54 @@
+.card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 0.75rem;
+  padding: 0.85rem 0.85rem 0.75rem 0.85rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 6px 12px rgba(15, 23, 42, 0.06);
+  cursor: grab;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.card:active {
+  cursor: grabbing;
+  transform: scale(0.995);
+}
+
+.title {
+  font-weight: 600;
+  margin: 0 1.5rem 0.25rem 0;
+  color: #0f172a;
+  line-height: 1.25;
+}
+
+.description {
+  margin: 0 0 0.6rem;
+  color: #475569;
+  font-size: 0.9rem;
+}
+
+.meta {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.removeButton {
+  position: absolute;
+  top: 0.35rem;
+  right: 0.35rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  color: #64748b;
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.removeButton:hover {
+  background: rgba(248, 113, 113, 0.15);
+  color: #dc2626;
+}
