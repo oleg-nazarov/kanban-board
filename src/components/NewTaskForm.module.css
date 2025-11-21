@@ -38,11 +38,18 @@
   border: 1px solid #cbd5f5;
   padding: 0.65rem 0.75rem;
   font-size: 0.95rem;
+  font-family: inherit;
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
 .textarea {
   resize: none;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: #94a3b8;
+  font-family: inherit;
 }
 
 .input:focus,
