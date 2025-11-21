@@ -53,9 +53,14 @@ export function Column({ column, tasks, onMoveTask, onDeleteTask }: ColumnProps)
         <span className={styles.count}>{tasks.length}</span>
       </header>
       <div className={styles.tasks}>
-        {tasks.map((task) => (
-          <TaskCard key={task.id} task={task} onDelete={onDeleteTask} />
-        ))}
+        {tasks.length === 0 ? (
+          <div className={styles.emptyState} aria-live="polite">
+            <p className={styles.emptyTitle}>No tasks yet</p>
+            <p className={styles.emptyHint}>Drop a card here or create a new one.</p>
+          </div>
+        ) : (
+          tasks.map((task) => <TaskCard key={task.id} task={task} onDelete={onDeleteTask} />)
+        )}
       </div>
     </section>
   );
